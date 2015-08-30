@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		306590A71B8ABE0400F3A406 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306590A61B8ABE0400F3A406 /* Utilities.swift */; };
+		30CC1C0E1B8A95A20013B74F /* NewGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC1C0D1B8A95A20013B74F /* NewGameController.swift */; };
 		94E1D8551B6CA2D500410C27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E1D8541B6CA2D500410C27 /* AppDelegate.swift */; };
 		94E1D85A1B6CA2D500410C27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94E1D8581B6CA2D500410C27 /* Main.storyboard */; };
 		94E1D85C1B6CA2D500410C27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94E1D85B1B6CA2D500410C27 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		306590A61B8ABE0400F3A406 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		30CC1C0D1B8A95A20013B74F /* NewGameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGameController.swift; sourceTree = "<group>"; };
 		94E1D8511B6CA2D500410C27 /* SpadesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpadesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94E1D8541B6CA2D500410C27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94E1D8591B6CA2D500410C27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				94E1D8541B6CA2D500410C27 /* AppDelegate.swift */,
 				94E1D8581B6CA2D500410C27 /* Main.storyboard */,
+				30CC1C0D1B8A95A20013B74F /* NewGameController.swift */,
+				306590A61B8ABE0400F3A406 /* Utilities.swift */,
 				94E1D88C1B6DA44500410C27 /* CurrentGameController.swift */,
 				94E1D8841B6CA65700410C27 /* NewRoundController.swift */,
 				94E1D8861B6CA6A000410C27 /* SpadesGameModel.swift */,
@@ -270,8 +276,10 @@
 				94E1D88B1B6CA71100410C27 /* SpadesMetadataModel.swift in Sources */,
 				94E1D8871B6CA6A000410C27 /* SpadesGameModel.swift in Sources */,
 				94E1D8551B6CA2D500410C27 /* AppDelegate.swift in Sources */,
+				30CC1C0E1B8A95A20013B74F /* NewGameController.swift in Sources */,
 				94E1D8891B6CA6E700410C27 /* SpadesRoundModel.swift in Sources */,
 				94E1D8851B6CA65700410C27 /* NewRoundController.swift in Sources */,
+				306590A71B8ABE0400F3A406 /* Utilities.swift in Sources */,
 				94E1D88D1B6DA44500410C27 /* CurrentGameController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +505,7 @@
 				94E1D87B1B6CA2D500410C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E1D87C1B6CA2D500410C27 /* Build configuration list for PBXNativeTarget "SpadesAppTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +514,7 @@
 				94E1D87E1B6CA2D500410C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94E1D87F1B6CA2D500410C27 /* Build configuration list for PBXNativeTarget "SpadesAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +523,7 @@
 				94E1D8811B6CA2D500410C27 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

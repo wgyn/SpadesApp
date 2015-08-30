@@ -27,14 +27,6 @@ class NewRoundController: UITableViewController {
     @IBOutlet weak var bidPlayer4: UILabel!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    func popupAlert(title: String, message: String) {
-        let alert = UIAlertView()
-        alert.title = title
-        alert.message = message
-        alert.addButtonWithTitle("Ok")
-        alert.show()
-    }
-    
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "SaveSpadesRoundSegue" {
             let maybeInputs = [bid1, bid2, bid3, bid4, tricks1, tricks2, tricks3, tricks4]

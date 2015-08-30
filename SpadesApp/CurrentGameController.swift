@@ -13,21 +13,6 @@ class CurrentGameController: UITableViewController {
     var game: SpadesGame!
     @IBOutlet weak var gameSummary: UITextView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // TODO: Actually initialize player and teams
-        let player1 = Player(name: "Andy")
-        let player2 = Player(name: "Bob")
-        let player3 = Player(name: "Charles")
-        let player4 = Player(name: "David")
-        let team1 = Team(player1: player1, player2: player2, teamName: "Team 1")
-        let team2 = Team(player1: player3, player2: player4, teamName: "Team 2")
-        
-        self.game = SpadesGame(team1: team1, team2: team2, playUntil: 500)
-        self.gameSummary.text = formatGameSummary()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,15 +45,14 @@ class CurrentGameController: UITableViewController {
             }
             
             let currentScores = self.game.currentScores
-            let currentBags = self.game.currentBags
+            let teams = self.game.teams
             
             self.gameSummary.text = formatGameSummary()
             if self.game.isOver {
-                let alert = UIAlertView()
-                alert.title = "\(self.game.winner!) wins!"
-                alert.message = "Final score... Team 1: \(currentScores.0) to Team 2: \(currentScores.1)"
-                alert.addButtonWithTitle("Ok")
-                alert.show()
+                popupAlert(
+                    "\(self.game.winner!.name) wins!",
+                    message: "Final score... \(teams.0.name): \(currentScores.0) to \(teams.1.name): \(currentScores.1)"
+                )
             }
         }
         
