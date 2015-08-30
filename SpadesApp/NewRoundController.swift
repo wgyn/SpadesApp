@@ -11,6 +11,16 @@ import UIKit
 class NewRoundController: UITableViewController {
     
     var newRound: SpadesRound?
+    var player1Name: String!
+    var player2Name: String!
+    var player3Name: String!
+    var player4Name: String!
+    
+    @IBOutlet weak var labelBid1: UILabel!
+    @IBOutlet weak var labelBid2: UILabel!
+    @IBOutlet weak var labelBid3: UILabel!
+    @IBOutlet weak var labelBid4: UILabel!
+    
     @IBOutlet weak var bid1: UITextField!
     @IBOutlet weak var bid2: UITextField!
     @IBOutlet weak var bid3: UITextField!
@@ -21,11 +31,25 @@ class NewRoundController: UITableViewController {
     @IBOutlet weak var tricks3: UITextField!
     @IBOutlet weak var tricks4: UITextField!
     
-    @IBOutlet weak var bidPlayer1: UILabel!
-    @IBOutlet weak var bidPlayer2: UILabel!
-    @IBOutlet weak var bidPlayer3: UILabel!
-    @IBOutlet weak var bidPlayer4: UILabel!
+    @IBOutlet weak var labelTricks1: UILabel!
+    @IBOutlet weak var labelTricks2: UILabel!
+    @IBOutlet weak var labelTricks3: UILabel!
+    @IBOutlet weak var labelTricks4: UILabel!
+    
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    override func viewDidLoad() {
+        self.labelBid1.text = self.player1Name
+        self.labelBid2.text = self.player2Name
+        self.labelBid3.text = self.player3Name
+        self.labelBid4.text = self.player4Name
+        
+        self.labelTricks1.text = self.player1Name
+        self.labelTricks2.text = self.player2Name
+        self.labelTricks3.text = self.player3Name
+        self.labelTricks4.text = self.player4Name
+        // TODO: Add test that names get set correctly in NewRoundController
+   }
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "SaveSpadesRoundSegue" {

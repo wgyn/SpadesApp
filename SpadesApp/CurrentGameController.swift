@@ -15,7 +15,6 @@ class CurrentGameController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,11 +32,22 @@ class CurrentGameController: UITableViewController {
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NewRoundSegue" {
+            let nav = segue.destinationViewController as! UINavigationController
+            let newRound = nav.topViewController as! NewRoundController
+            newRound.player1Name = self.game.teams.0.players.0.name
+            newRound.player2Name = self.game.teams.0.players.1.name
+            newRound.player3Name = self.game.teams.1.players.0.name
+            newRound.player4Name = self.game.teams.1.players.1.name
+            
+        }
+    }
+    
     @IBAction
     func unwindToCurrentGame(segue: UIStoryboardSegue) {
         let source = segue.sourceViewController as! NewRoundController
         if source.newRound != nil {
-            // TODO: Handle some kind of error?
             do {
                 try self.game.addRound(source.newRound!)
             } catch {

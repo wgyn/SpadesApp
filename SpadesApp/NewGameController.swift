@@ -52,5 +52,4 @@ class NewGameController: UITableViewController {
         
         return false
     }
-    // TODO: Make sure all fields are filled before attempting to segue
 }

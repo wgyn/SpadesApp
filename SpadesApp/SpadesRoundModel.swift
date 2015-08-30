@@ -10,7 +10,6 @@ import Foundation
 
 class SpadesRound {
     
-    // TODO: Keep track of teams, currently assume (P1, P3) and (P2, P4)
     // TODO: Split up entry of bids and tricks
     // TODO: These should not be arrays...
     
